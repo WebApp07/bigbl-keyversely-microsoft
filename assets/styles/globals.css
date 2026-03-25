@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .wrapper {
+    @apply max-w-7xl lg:mx-auto p-5 md:px-10 w-full;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .h1-bold {
+    @apply font-bold text-3xl lg:text-4xl;
+  }
+
+  .h2-bold {
+    @apply font-bold text-2xl lg:text-3xl;
+  }
+
+  .h3-bold {
+    @apply font-bold text-xl lg:text-2xl;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html.dark .upload-field .text-white {
+  color: #ffff !important;
+}
+
+upload-field .text-white {
+  color: #000 !important;
+}
+
+/* ─────────────────────────────────────────────
+   ABOUT PAGE — paste this into your globals.css
+   ───────────────────────────────────────────── */
+
+:root {
+  --about-text-primary: #1a1a1a;
+  --about-text-secondary: #444444;
+  --about-text-muted: #666666;
+  --about-text-faint: #999999;
+  --about-link: #0057d9;
+  --about-border: #e5e5e5;
+  --about-bg-card: #f9f9f7;
+  --about-bg-card-border: #e5e5e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --about-text-primary: #f0f0f0;
+    --about-text-secondary: #cccccc;
+    --about-text-muted: #aaaaaa;
+    --about-text-faint: #777777;
+    --about-link: #6aadff;
+    --about-border: #2e2e2e;
+    --about-bg-card: #1e1e1e;
+    --about-bg-card-border: #2e2e2e;
+  }
+}
+
+/* If you use Tailwind class-based dark mode */
+.dark {
+  --about-text-primary: #f0f0f0;
+  --about-text-secondary: #cccccc;
+  --about-text-muted: #aaaaaa;
+  --about-text-faint: #777777;
+  --about-link: #6aadff;
+  --about-border: #2e2e2e;
+  --about-bg-card: #1e1e1e;
+  --about-bg-card-border: #2e2e2e;
+}
+
+.about-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+  font-family: "Georgia", serif;
+  color: var(--about-text-primary);
+  line-height: 1.85;
+}
+.about-breadcrumb {
+  font-size: 13px;
+  color: var(--about-text-muted);
+  margin-bottom: 32px;
+}
+.about-breadcrumb a {
+  color: var(--about-link);
+  text-decoration: none;
+}
+.about-breadcrumb span {
+  margin: 0 8px;
+}
+.about-h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+  color: var(--about-text-primary);
+}
+.about-lead {
+  font-size: 16px;
+  color: var(--about-text-muted);
+  margin-top: 0;
+  margin-bottom: 48px;
+}
+.about-hr {
+  border: none;
+  border-top: 1px solid var(--about-border);
+  margin-bottom: 48px;
+}
+.about-h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: var(--about-text-primary);
+}
+.about-section {
+  margin-bottom: 48px;
+}
+.about-p {
+  font-size: 15.5px;
+  color: var(--about-text-secondary);
+  margin: 0 0 14px;
+}
+.about-p:last-child {
+  margin: 0;
+}
+.about-link {
+  color: var(--about-link);
+}
+.about-ul {
+  font-size: 15.5px;
+  color: var(--about-text-secondary);
+  padding-left: 22px;
+  margin: 0;
+}
+.about-ul li {
+  margin-bottom: 8px;
+}
+.about-ul li:last-child {
+  margin-bottom: 0;
+}
+.about-card {
+  margin-bottom: 48px;
+  background: var(--about-bg-card);
+  border: 1px solid var(--about-bg-card-border);
+  border-radius: 10px;
+  padding: 28px 32px;
+}
+.about-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: var(--about-text-primary);
+}
+.about-table {
+  border-collapse: collapse;
+  font-size: 15px;
+  color: var(--about-text-secondary);
+  width: 100%;
+}
+.about-table td {
+  padding-bottom: 10px;
+  vertical-align: top;
+}
+.about-table td:first-child {
+  padding-right: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--about-text-muted);
+  font-size: 14px;
+}
+.about-table tr:last-child td {
+  padding-bottom: 0;
+}
+.about-footer-note {
+  font-size: 13px;
+  color: var(--about-text-faint);
+  margin: 0;
+  line-height: 1.8;
+}

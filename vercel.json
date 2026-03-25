@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/auto-blog?secret=bigbl2026",
+      "schedule": "0 9 * * *"
+    }
+  ]
+}
