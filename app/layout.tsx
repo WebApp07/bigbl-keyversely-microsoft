@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
 import WhatsappButton from "@/components/WhatsappButton";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,17 +16,13 @@ export const metadata: Metadata = {
   },
   description:
     "Buy genuine Windows, Microsoft Office, and antivirus activation keys at Keyversely. Instant email delivery, verified Microsoft Marketplace partner, 30-day money back guarantee.",
-
-  // ✅ Google verification ONLY
   verification: {
     google: "_9rp5MYCUxCwLBmiWo9eA6E-V1ou8FdZ2-bFRdCL0To",
   },
-
   metadataBase: new URL("https://www.bigbl.com"),
   authors: [{ name: "Keyversely LLC", url: "https://www.bigbl.com" }],
   creator: "Keyversely LLC",
   publisher: "Keyversely LLC",
-
   robots: {
     index: true,
     follow: true,
@@ -36,7 +33,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,7 +50,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     site: "@Bigblkey",
@@ -74,6 +69,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
+        {/* Google Ads Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18039425149"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18039425149');
+          `}
+        </Script>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
