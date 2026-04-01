@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Buy genuine Windows, Microsoft Office, and antivirus activation keys at Keyversely. Instant email delivery, verified Microsoft Marketplace partner, 30-day money back guarantee.",
   verification: {
-    google: "_9rp5MYCUxCwLBmiWo9eA6E-V1ou8FdZ2-bFRdCL0To",
+    google: "xOJ30HfBHX56MEZ7f1u1Rre8hiBGbPrSrLMBG1YzVwU",
   },
   metadataBase: new URL("https://www.bigbl.com"),
   authors: [{ name: "Keyversely LLC", url: "https://www.bigbl.com" }],
@@ -82,7 +82,6 @@ export default function RootLayout({
             gtag('config', 'AW-18039425149');
           `}
         </Script>
-
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
